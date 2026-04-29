@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragen 01 Tags</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+    <div id="bg-shader" class="bg-layer"></div>
+    <div class="bg-grain"></div>
+
+    <div class="page">
+        <div class="shell">
+            <header class="topbar">
+                <div class="brand">
+                    <span class="brand-dot"></span>
+                    Fragen <span class="brand-sep">/</span> 01
+                </div>
+                <a href="../fragen.html" class="back-link">
+                    <span class="arr" aria-hidden="true">←</span>
+                    Themen
+                </a>
+            </header>
+
+            <section class="section-head">
+                <div class="section-kicker">Quiz 01</div>
+                <h1 class="section-title">Tags</h1>
+            </section>
+
+            <div class="quiz-wrap">
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 1 von 3</div>
+                    <div class="quiz-q">Was ist an <code>&lt;p&gt;Hallo Welt</code> nicht korrekt?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span>Der Text darf nicht länger als ein Wort sein.</button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">B</span>Der schließende Tag <code>&lt;/p&gt;</code> fehlt.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">C</span>Man muss immer <code>&lt;P&gt;</code> groß schreiben.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span>Zwischen den Klammern darf kein Leerzeichen stehen.</button>
+                    </div>
+                    <div class="quiz-feedback">Ein Absatz braucht immer einen öffnenden und einen schließenden Tag. Am Ende gehört also <code>&lt;/p&gt;</code> dazu.</div>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 2 von 3</div>
+                    <div class="quiz-q">Woran erkennst du einen <strong>schließenden</strong> Tag?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span>Er ist komplett in Großbuchstaben geschrieben.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">B</span>Er steht ganz am Ende der Datei.</button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">C</span>Nach der öffnenden Klammer steht ein Schrägstrich, zum Beispiel <code>&lt;/p&gt;</code>.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span>Er hat keine spitzen Klammern.</button>
+                    </div>
+                    <div class="quiz-feedback">Der Schrägstrich direkt nach der öffnenden Klammer ist das Kennzeichen für einen schließenden Tag.</div>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 3 von 3</div>
+                    <div class="quiz-q">Welche dieser Schreibweisen ist <strong>kein</strong> gültiger HTML-Tag?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span><code>&lt;p&gt;</code></button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">B</span><code>(p)</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">C</span><code>&lt;/p&gt;</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span><code>&lt;br&gt;</code></button>
+                    </div>
+                    <div class="quiz-feedback">HTML-Tags stehen immer in spitzen Klammern <code>&lt; &gt;</code>, niemals in runden.</div>
+                </div>
+
+            </div>
+
+            <nav class="lesson-nav" aria-label="Quiznavigation">
+                <a href="../fragen.html" class="lesson-nav-btn">
+                    <span class="arr" aria-hidden="true">←</span> Themen
+                </a>
+                <a href="02-ueberschriften.html" class="lesson-nav-btn primary">
+                    Weiter · 02 <span class="arr" aria-hidden="true">→</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="../assets/shader.js"></script>
+    <script src="../assets/main.js"></script>
+</body>
+</html>

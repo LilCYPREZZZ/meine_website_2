@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optionen · HTML Selbstlerneinheit</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <div id="bg-shader" class="bg-layer"></div>
+    <div class="bg-grain"></div>
+
+    <div class="page">
+        <div class="shell">
+            <header class="topbar">
+                <div class="brand">
+                    <span class="brand-dot"></span>
+                    Optionen
+                </div>
+                <a href="menu.html" class="back-link">
+                    <span class="arr" aria-hidden="true">←</span>
+                    Zum Menü
+                </a>
+            </header>
+
+            <section class="section-head">
+                <div class="section-kicker">Einstellungen</div>
+                <h1 class="section-title">Pass die Einheit an dich an</h1>
+                <p class="section-desc">
+                    Deine Einstellungen werden im Browser gespeichert. Du musst sie also nur einmal setzen.
+                </p>
+            </section>
+
+            <div class="info-block">
+                <div class="option-row">
+                    <div class="option-info">
+                        <div class="option-name">Vollbild beim Start</div>
+                        <div class="option-desc">Öffnet die Lerneinheit automatisch im Vollbild-Modus.</div>
+                    </div>
+                    <div class="toggle" id="toggle-fullscreen" aria-label="Vollbild beim Start"></div>
+                </div>
+
+                <div class="option-row">
+                    <div class="option-info">
+                        <div class="option-name">Animationen</div>
+                        <div class="option-desc">Dezente Übergänge beim Öffnen von Seiten und Karten.</div>
+                    </div>
+                    <div class="toggle" id="toggle-animations" aria-label="Animationen"></div>
+                </div>
+
+                <div class="option-row">
+                    <div class="option-info">
+                        <div class="option-name">Hintergrund</div>
+                        <div class="option-desc">Animierter Hintergrund. Auf älteren Geräten ggf. ausschalten.</div>
+                    </div>
+                    <div class="toggle" id="toggle-shader" aria-label="Hintergrund"></div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-label">Fortschritt</div>
+                <h2 class="info-title">Alle Einstellungen zurücksetzen</h2>
+                <p class="info-text">
+                    Setzt alle Optionen auf die Standardwerte zurück. Deine Antworten aus den Quizfragen
+                    werden dabei nicht gespeichert.
+                </p>
+                <div class="lesson-nav" style="justify-content:flex-start; margin-top:16px;">
+                    <button class="lesson-nav-btn" id="reset-btn">
+                        Zurücksetzen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/shader.js"></script>
+    <script src="assets/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            LE.bindToggle(document.getElementById('toggle-fullscreen'), LE.STORAGE.fullscreen, true);
+            LE.bindToggle(document.getElementById('toggle-animations'), LE.STORAGE.animations, true);
+            LE.bindToggle(document.getElementById('toggle-shader'),     LE.STORAGE.shader,     true, function (on) {
+                var bg = document.getElementById('bg-shader');
+                if (bg) bg.style.display = on ? '' : 'none';
+            });
+
+            document.getElementById('reset-btn').addEventListener('click', function () {
+                Object.values(LE.STORAGE).forEach(function (k) { localStorage.removeItem(k); });
+                location.reload();
+            });
+        });
+    </script>
+</body>
+</html>
