@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragen 02 Überschriften</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+    <div id="bg-shader" class="bg-layer"></div>
+    <div class="bg-grain"></div>
+
+    <div class="page">
+        <div class="shell">
+            <header class="topbar">
+                <div class="brand">
+                    <span class="brand-dot"></span>
+                    Fragen <span class="brand-sep">/</span> 02
+                </div>
+                <a href="../fragen.html" class="back-link">
+                    <span class="arr" aria-hidden="true">←</span>
+                    Themen
+                </a>
+            </header>
+
+            <section class="section-head">
+                <div class="section-kicker">Quiz 02</div>
+                <h1 class="section-title">Überschriften, Absätze & Listen</h1>
+            </section>
+
+            <div class="quiz-wrap">
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 1 von 3</div>
+                    <div class="quiz-q">Welcher Tag eignet sich am besten für den <strong>Haupttitel</strong> einer Seite?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span><code>&lt;p&gt;</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">B</span><code>&lt;h6&gt;</code></button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">C</span><code>&lt;h1&gt;</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span><code>&lt;title&gt;</code></button>
+                    </div>
+                    <div class="quiz-feedback"><code>&lt;h1&gt;</code> ist die größte und wichtigste Überschrift. Genau richtig für den Haupttitel einer Seite.</div>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 2 von 3</div>
+                    <div class="quiz-q">Du willst eine Einkaufsliste mit drei Punkten schreiben. Welche Tags nimmst du?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span><code>&lt;list&gt;</code> und <code>&lt;item&gt;</code></button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">B</span><code>&lt;ul&gt;</code> und <code>&lt;li&gt;</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">C</span><code>&lt;table&gt;</code> und <code>&lt;td&gt;</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span><code>&lt;h1&gt;</code> und <code>&lt;p&gt;</code></button>
+                    </div>
+                    <div class="quiz-feedback"><code>&lt;ul&gt;</code> umschließt die ganze Liste. Jeden einzelnen Punkt setzt du in ein <code>&lt;li&gt;</code>.</div>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 3 von 3</div>
+                    <div class="quiz-q">Wie viele verschiedene Überschriftengrößen gibt es in HTML?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span>3</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">B</span>4</button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">C</span>6</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span>10</button>
+                    </div>
+                    <div class="quiz-feedback">Es gibt sechs Stufen, von <code>&lt;h1&gt;</code> (am größten) bis <code>&lt;h6&gt;</code> (am kleinsten).</div>
+                </div>
+
+            </div>
+
+            <nav class="lesson-nav" aria-label="Quiznavigation">
+                <a href="01-tags.html" class="lesson-nav-btn">
+                    <span class="arr" aria-hidden="true">←</span> Zurück · 01
+                </a>
+                <a href="03-links-bilder.html" class="lesson-nav-btn primary">
+                    Weiter · 03 <span class="arr" aria-hidden="true">→</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="../assets/shader.js"></script>
+    <script src="../assets/main.js"></script>
+</body>
+</html>

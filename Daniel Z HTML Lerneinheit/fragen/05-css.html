@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragen 05 CSS</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+    <div id="bg-shader" class="bg-layer"></div>
+    <div class="bg-grain"></div>
+
+    <div class="page">
+        <div class="shell">
+            <header class="topbar">
+                <div class="brand">
+                    <span class="brand-dot"></span>
+                    Fragen <span class="brand-sep">/</span> 05
+                </div>
+                <a href="../fragen.html" class="back-link">
+                    <span class="arr" aria-hidden="true">←</span>
+                    Themen
+                </a>
+            </header>
+
+            <section class="section-head">
+                <div class="section-kicker">Quiz 05</div>
+                <h1 class="section-title">CSS</h1>
+            </section>
+
+            <div class="quiz-wrap">
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 1 von 3</div>
+                    <div class="quiz-q">Wofür sind HTML und CSS jeweils zuständig?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span>HTML regelt das Aussehen, CSS den Inhalt.</button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">B</span>HTML regelt den Inhalt, CSS das Aussehen.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">C</span>Beide regeln genau dasselbe.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span>CSS ist ausschließlich für Bilder zuständig.</button>
+                    </div>
+                    <div class="quiz-feedback">HTML ist für Struktur und Inhalt da. CSS kümmert sich um Farben, Schriften und Layout.</div>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 2 von 3</div>
+                    <div class="quiz-q">Welche Schreibweise färbt einen einzelnen Absatz rot ein?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span><code>&lt;p color="red"&gt;Text&lt;/p&gt;</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">B</span><code>&lt;p font="red"&gt;Text&lt;/p&gt;</code></button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">C</span><code>&lt;p style="color:red"&gt;Text&lt;/p&gt;</code></button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span><code>&lt;p red&gt;Text&lt;/p&gt;</code></button>
+                    </div>
+                    <div class="quiz-feedback">Direkt im Tag schreibt man CSS mit dem <code>style</code>-Attribut: <code>style="color:red"</code>.</div>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-q-label">Frage 3 von 3</div>
+                    <div class="quiz-q">Warum ist es sinnvoll, CSS in eine <strong>eigene Datei</strong> auszulagern?</div>
+                    <div class="quiz-opts">
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">A</span>Damit die HTML-Datei nicht mehr funktioniert.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">B</span>Damit niemand die Farben sehen kann.</button>
+                        <button class="quiz-opt" data-correct="1" onclick="LE.checkAnswer(this,true)"><span class="opt-letter">C</span>So passen sich alle Seiten an, wenn man die CSS-Datei ändert.</button>
+                        <button class="quiz-opt" onclick="LE.checkAnswer(this,false)"><span class="opt-letter">D</span>Das ist Pflicht, sonst lädt die Seite nicht.</button>
+                    </div>
+                    <div class="quiz-feedback">Eine zentrale CSS-Datei spart Arbeit. Du änderst sie einmal, und alle HTML-Seiten, die sie einbinden, sehen sofort anders aus.</div>
+                </div>
+
+            </div>
+
+            <nav class="lesson-nav" aria-label="Quiznavigation">
+                <a href="04-tabellen.html" class="lesson-nav-btn">
+                    <span class="arr" aria-hidden="true">←</span> Zurück · 04
+                </a>
+                <a href="../menu.html" class="lesson-nav-btn primary">
+                    Zum Menü <span class="arr" aria-hidden="true">→</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="../assets/shader.js"></script>
+    <script src="../assets/main.js"></script>
+</body>
+</html>
